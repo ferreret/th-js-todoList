@@ -6,8 +6,7 @@ VARIABLES
 */
 
 var taskInput            = document.getElementById('new-task');
-var addButton            = taskInput.nextSibling;
-//var addButton = document.getElementsByTagName('button')[0];
+var addButton            = taskInput.nextSibling; //var addButton = document.getElementsByTagName('button')[0];
 var incompleteTaskHolder = document.getElementById('incomplete-tasks');
 var completedTaskHolder  = document.getElementById('completed-tasks');
 
@@ -65,6 +64,12 @@ var taskIncomplete = function () {
 		// Append the task list item to the umcompleted-tasks
 }
 
+var bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
+	// Select it's children
+		// Bind the editTask to edit button
+		// Bind deleteTask to delete button
+		// Bind checkBoxEventHandler to checkbox
+} 
 
 /*
 EVENTS
@@ -72,3 +77,10 @@ EVENTS
 //Set the click handler to the addTask function
 addButton.onclick = addTask;
 
+// Cycle over incompleteTaskHolder ul list items
+	// For each list item
+		// Bind events to list item's children (taskCompleted)
+
+// Cycle over completeTaskHolder ul list items
+	// For each list item
+		// Bind events to list item's children (taskIncompleted)
